@@ -1,7 +1,7 @@
 # Who's That Pokemon?
 Pokemon's famous trivia question "Who's that pokemon?" turned into a game.
 
-Play It Here: [https://pari55051.github.io/whos-that-pokemon/](https://pari5501.github.io/whos-that-pokemon/)
+Play It Here: [https://pari5501.github.io/whos-that-pokemon/](https://pari55051.github.io/whos-that-pokemon/)
 
 ![question page](./assets/preview1.png)
 ![correct answer page](./assets/preview2.png)
