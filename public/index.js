@@ -4,6 +4,7 @@ const pokemonImage = document.querySelector('#pokemon-image')
 const textOverlay = document.querySelector('#text-overlay')
 const choices = document.querySelector('#choices')
 const playBtn = document.querySelector('#play')
+
 playBtn.addEventListener('click', fetchData)
 loadVoice()
 addAnswerHandler()
@@ -30,21 +31,39 @@ function showSilhouette() {
 function displayChoices() {
     const { pokemonChoices } = gameData
     const choicesHTML = pokemonChoices.map(({ name }) => {
-        return `<button data-name="${name}">${name}</button>`
+        return `<button data-name="${name}" class="choice">${name}</button>`
     }).join('')
 
     choices.innerHTML = choicesHTML
+    // playBtn.disabled = true
 }
+
 
 function addAnswerHandler() {
     choices.addEventListener('click', e => {
         const { name } = e.target.dataset
         const resultClass = (name === gameData.correct.name) ?
-            'correct' : 'incorrect'
-
+        'correct' : 'incorrect'
+        
         e.target.classList.add(resultClass)
+        
         revealPokemon()
         speakAnswer()
+        
+        // console.log("reached here")
+        const choice_btns = document.querySelectorAll('.choice')
+        // console.log(choice_btns)
+
+        choice_btns.forEach((choice) => {
+            console.log(choice)
+            if (choice !== e) {
+                choice.disabled = true
+            }
+        })
+
+        playBtn.disabled = false
+        playBtn.innerHTML = `Play Again!`
+
     })
 }
 
