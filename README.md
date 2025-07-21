@@ -1,5 +1,5 @@
-# whos-that-pokemon
-pokemon's famous trivia question "who's that pokemon" turned into a game
+# Who's That Pokemon?
+Pokemon's famous trivia question "Who's that pokemon?" turned into a game.
 
 ![question page](./assets/preview1.png)
 ![correct answer page](./assets/preview2.png)
